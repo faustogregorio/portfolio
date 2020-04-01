@@ -11,6 +11,8 @@ export class ManagementComponent implements OnInit {
   color;
   palette;
 
+  //
+
   constructor() {
   }
 

@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { ManagementRoutingModule } from './management-routing.module';
 import { ManagementComponent } from './management.component';
-
+import {MatIconModule} from '@angular/material/icon';
+import { DragAndDropDirective } from './drag-and-drop.directive';
 
 @NgModule({
-  declarations: [ManagementComponent],
+  declarations: [ManagementComponent, DragAndDropDirective],
   imports: [
     CommonModule,
-    ManagementRoutingModule
+    ManagementRoutingModule,
+    MatIconModule
   ]
 })
 export class ManagementModule { }
