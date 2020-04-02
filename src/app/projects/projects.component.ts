@@ -11,9 +11,9 @@ export class ProjectsComponent implements OnInit {
   projects: Project[] = [
     {
       _id: 'qw',
-      name: 'generator',
+      name: 'TruThables',
       description: 'desc',
-      tecnologies: [
+      tools: [
         {
           _id: '1',
           name: 'php',
@@ -21,13 +21,14 @@ export class ProjectsComponent implements OnInit {
         }
       ],
       backgroundColor: '000',
+      descriptionColor: 'ccc',
       imageUrl: 'assets/img/truthables.png'
     },
     {
       _id: 'qw',
-      name: 'generator',
+      name: 'Truthables',
       description: 'desc',
-      tecnologies: [
+      tools: [
         {
           _id: '1',
           name: 'php',
@@ -35,13 +36,14 @@ export class ProjectsComponent implements OnInit {
         }
       ],
       backgroundColor: '546523',
-      imageUrl: 'assets/img/truthables.jpg'
+      descriptionColor: 'ccc',
+      imageUrl: 'assets/img/dsc.jpg'
     },
     {
       _id: 'qw',
-      name: 'generator',
+      name: 'Truth Table Generator',
       description: 'desc',
-      tecnologies: [
+      tools: [
         {
           _id: '1',
           name: 'php',
@@ -49,9 +51,26 @@ export class ProjectsComponent implements OnInit {
         }
       ],
       backgroundColor: '865427',
-      imageUrl: 'assets/img/truth-table-generator-1.jpg'
+      descriptionColor: 'ccc',
+      imageUrl: 'assets/img/ttg.jpg'
+    },
+    {
+      _id: 'qw',
+      name: 'Generator',
+      description: 'desc',
+      tools: [
+        {
+          _id: '1',
+          name: 'php',
+          logoUrl: 'assets/img/php.png'
+        }
+      ],
+      backgroundColor: '865427',
+      descriptionColor: 'ccc',
+      imageUrl: 'assets/img/crow.jpg'
     }
   ];
+  fontSize: string;
   constructor() {
   }
 
@@ -61,12 +80,18 @@ export class ProjectsComponent implements OnInit {
   }
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    if (window.innerWidth < 960) {
+    if (window.innerWidth <= 600) {
       this.cols = 1;
-    } else if (window.innerWidth > 1920) {
-      this.cols = 3;
-    } else {
+      this.fontSize = '0.8rem';
+    } else if (window.innerWidth <= 960) {
       this.cols = 2;
+      this.fontSize = '0.9rem';
+    } else if (window.innerWidth <= 1920) {
+      this.cols = 3;
+      this.fontSize = window.innerWidth <= 1280 ? '1rem' : '1.4rem';
+    } else {
+      this.cols = 4;
+      this.fontSize = '1.5rem';
     }
   }
 }

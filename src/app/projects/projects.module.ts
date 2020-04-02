@@ -5,9 +5,9 @@ import { ProjectsRoutingModule } from './projects-routing.module';
 import { ProjectsComponent } from './projects.component';
 import { ProjectItemComponent } from './project-item/project-item.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [ProjectsComponent, ProjectItemComponent],
@@ -17,8 +17,9 @@ import {MatButtonModule} from '@angular/material/button';
     FlexLayoutModule,
     MatGridListModule,
     MatIconModule,
-    MatButtonModule
-  ]
+    MatButtonModule,
+  ],
+  exports: [ProjectItemComponent]
 })
 export class ProjectsModule { }
 

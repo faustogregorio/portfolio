@@ -8,6 +8,7 @@ import { Project } from '../project.model';
 })
 export class ProjectItemComponent implements OnInit {
   @Input('project') project: Project;
+  @Input('fontSize') fontSize: string;
   constructor() { }
 
   ngOnInit(): void {

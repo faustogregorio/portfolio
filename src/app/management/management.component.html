@@ -1,3 +1,17 @@
-<input type="file" (change)="onFileChange($event)">
-<img src="" alt="" width="200px" #image>
+<!-- <input type="file" (change)="onFileChange($event)">
+<img src="" alt="" width="200px" #image> -->
 
+<mat-grid-list cols="5" gutterSize="10" rowHeight="2:1" >
+
+  <mat-grid-tile colspan="3" rowspan="4" style="background: whitesmoke;">
+    <mat-grid-tile-header>header</mat-grid-tile-header>
+    <app-project-form></app-project-form>
+    <mat-grid-tile-footer>12</mat-grid-tile-footer>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2" rowspan="2">
+    <app-project-item
+      [project]="project"
+      [fontSize]="fontSize"
+    ></app-project-item>
+  </mat-grid-tile>
+</mat-grid-list>

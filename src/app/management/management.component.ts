@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import ColorThief from '../../../node_modules/colorthief/dist/color-thief';
+import { Project } from '../projects/project.model';
 
 @Component({
   selector: 'app-management',
@@ -10,9 +11,23 @@ export class ManagementComponent implements OnInit {
   @ViewChild('image', { static: true }) imageEl: ElementRef;
   color;
   palette;
-
-  //
-
+  fontSize = '1rem';
+  project: Project =
+    {
+      _id: 'qw',
+      name: 'TruThables',
+      description: 'desc',
+      tools: [
+        {
+          _id: '1',
+          name: 'php',
+          logoUrl: 'assets/img/php.png'
+        }
+      ],
+      backgroundColor: '000',
+      descriptionColor: 'ccc',
+      imageUrl: 'assets/img/dsc.jpg'
+    };
   constructor() {
   }
 
@@ -37,13 +52,6 @@ export class ManagementComponent implements OnInit {
       console.log('color: ', this.color);
       console.log('palette: ', this.palette);
     };
-    /* img.addEventListener('load', function () {
-      this.color = colorThief.getColor(img);
-      this.palette = colorThief.getPalette(img);
-      console.log('color: ', this.color);
-      console.log('palette: ', this.palette);
-    }, false);
-    event.target.files = []; */
   }
 
 }
