@@ -35,6 +35,11 @@ export class ManagementComponent implements OnInit {
 
   }
 
+  updateProject($event: Project) {
+    this.project = $event;
+    console.log(this.project);
+  }
+
   onFileChange(event) {
     const colorThief = new ColorThief();
     let img = this.imageEl.nativeElement;

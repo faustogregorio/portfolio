@@ -1,20 +1,62 @@
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
-<p>lorem</p>
+<form [formGroup]="projectForm">
+  <mat-form-field appearance="outline" floatLabel="always">
+    <mat-label>Project Name</mat-label>
+    <input
+      matInput
+      placeholder="Enter the name of the project"
+      formControlName="name"
+      required
+    />
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <button
+    mat-icon-button
+    type="button"
+    color="accent"
+    [disabled]="projectForm.get('name').invalid"
+  >
+    <mat-icon>done</mat-icon>
+  </button>
+  <mat-form-field appearance="outline" floatLabel="always">
+    <mat-label>Description</mat-label>
+    <input
+      matInput
+      placeholder="Please enter a description"
+      formControlName="description"
+      required
+    />
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <button
+    mat-icon-button
+    type="button"
+    color="accent"
+    [disabled]="projectForm.get('description').invalid"
+  >
+    <mat-icon>done</mat-icon>
+  </button>
+  <button
+    mat-stroked-button
+    color="primary"
+    type="button"
+    color="accent"
+    (click)="addTool()"
+  >
+    Add Tool
+  </button>
+  <div class="tools-container" formArrayName="tools">
+    <div
+      *ngFor="let tool of tools.controls; let i = index"
+      @insertRemoveTrigger
+    >
+      <app-tool
+        [toolsData]="toolsData"
+        [toolForm]="tool"
+        [index]="i"
+        (onRemoveTool)="handleRemoveTool($event)"
+      ></app-tool>
+    </div>
+  </div>
+</form>
+<!-- <label style="color: whitesmoke">Add an item: <input #newItem /></label>
+<button (click)="childToParent(newItem.value)">Add to parent's list</button> -->

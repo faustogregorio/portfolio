@@ -10,6 +10,10 @@ import { ProjectFormComponent } from './project-form/project-form.component';
 import { ToolComponent } from './project-form/tool/tool.component';
 import { ProjectsModule } from '../projects/projects.module';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -23,8 +27,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
     ManagementRoutingModule,
     ProjectsModule,
     ReactiveFormsModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
     MatIconModule,
-    MatGridListModule
+    MatSelectModule
   ]
 })
 export class ManagementModule { }

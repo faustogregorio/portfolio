@@ -1,1 +1,43 @@
-<p>tool works!</p>
+<div [formGroup]="toolForm">
+  <mat-form-field appearance="outline" floatLabel="always">
+    <mat-label>Tool</mat-label>
+    <mat-select formControlName="name" (selectionChange)="onChange()">
+      <mat-option *ngFor="let tool of toolsData" [value]="{_id: tool._id,name: tool.name, logoUrl: tool.logoUrl}">
+        <img class="example-option-img" aria-hidden [src]="tool.logoUrl" height="25">
+        <span>{{tool.name}}</span>
+
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+<!--   <mat-form-field appearance="outline" floatLabel="always">
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      placeholder="Please enter a description"
+      formControlName="name"
+      required
+    />
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field> -->
+<!--   <mat-form-field appearance="outline" floatLabel="always">
+    <mat-label>Image</mat-label>
+    <input
+      matInput
+      placeholder="Please enter a description"
+      formControlName="logoUrl"
+      required
+    />
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field> -->
+  <button
+    mat-icon-button
+    type="button"
+    color="accent"
+    [disabled]="toolForm.get('name').invalid || toolForm.get('logoUrl').invalid"
+  >
+    <mat-icon>done</mat-icon>
+  </button>
+  <button mat-icon-button type="button" color="warn" (click)="emitToolIndex()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>

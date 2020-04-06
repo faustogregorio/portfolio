@@ -3,9 +3,9 @@
 
 <mat-grid-list cols="5" gutterSize="10" rowHeight="2:1" >
 
-  <mat-grid-tile colspan="3" rowspan="4" style="background: whitesmoke;">
+  <mat-grid-tile colspan="3" rowspan="4" style="background: #212121;">
     <mat-grid-tile-header>header</mat-grid-tile-header>
-    <app-project-form></app-project-form>
+    <app-project-form (project)="updateProject($event)"></app-project-form>
     <mat-grid-tile-footer>12</mat-grid-tile-footer>
   </mat-grid-tile>
   <mat-grid-tile colspan="2" rowspan="2">

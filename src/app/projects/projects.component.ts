@@ -37,7 +37,7 @@ export class ProjectsComponent implements OnInit {
       ],
       backgroundColor: '546523',
       descriptionColor: 'ccc',
-      imageUrl: 'assets/img/dsc.jpg'
+      imageUrl: 'https://es.web.img3.acsta.net/newsv7/20/03/19/11/27/1847917.jpg'
     },
     {
       _id: 'qw',
@@ -88,10 +88,10 @@ export class ProjectsComponent implements OnInit {
       this.fontSize = '0.9rem';
     } else if (window.innerWidth <= 1920) {
       this.cols = 3;
-      this.fontSize = window.innerWidth <= 1280 ? '1rem' : '1.4rem';
+      this.fontSize = window.innerWidth <= 1280 ? '1rem' : '1.1rem';
     } else {
       this.cols = 4;
-      this.fontSize = '1.5rem';
+      this.fontSize = '1.2rem';
     }
   }
 }
