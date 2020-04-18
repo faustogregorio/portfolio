@@ -1,62 +1,59 @@
-<form [formGroup]="projectForm">
-  <mat-form-field appearance="outline" floatLabel="always">
-    <mat-label>Project Name</mat-label>
-    <input
-      matInput
-      placeholder="Enter the name of the project"
-      formControlName="name"
-      required
-    />
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-  <button
-    mat-icon-button
-    type="button"
-    color="accent"
-    [disabled]="projectForm.get('name').invalid"
-  >
-    <mat-icon>done</mat-icon>
-  </button>
-  <mat-form-field appearance="outline" floatLabel="always">
-    <mat-label>Description</mat-label>
-    <input
-      matInput
-      placeholder="Please enter a description"
-      formControlName="description"
-      required
-    />
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-  <button
-    mat-icon-button
-    type="button"
-    color="accent"
-    [disabled]="projectForm.get('description').invalid"
-  >
-    <mat-icon>done</mat-icon>
-  </button>
-  <button
-    mat-stroked-button
-    color="primary"
-    type="button"
-    color="accent"
-    (click)="addTool()"
-  >
-    Add Tool
-  </button>
-  <div class="tools-container" formArrayName="tools">
-    <div
-      *ngFor="let tool of tools.controls; let i = index"
-      @insertRemoveTrigger
+<div [formGroup]="projectForm" fxFlex="100%" fxLayout="column" fxLayoutGap="15px">
+  <div fxFlex="100%" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="15px">
+    <mat-form-field appearance="outline" floatLabel="always" fxFlex="33.33%">
+      <mat-label>Project Name</mat-label>
+      <input
+        matInput
+        placeholder="Enter the name of the project"
+        formControlName="name"
+        required
+      />
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline" floatLabel="always" fxFlex="33.33%">
+      <mat-label>Description</mat-label>
+      <input
+        matInput
+        placeholder="Please enter a description"
+        formControlName="description"
+        required
+      />
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline" floatLabel="always" fxFlex="33.33%">
+      <mat-label>URL</mat-label>
+      <input
+        matInput
+        placeholder="Enter the URL of the project"
+        formControlName="url"
+        required
+      />
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </div>
+  <mat-divider></mat-divider>
+  <div fxFlex="100%" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="15px">
+    <button
+      mat-stroked-button
+      color="primary"
+      type="button"
+      color="accent"
+      (click)="addTool()"
     >
-      <app-tool
-        [toolsData]="toolsData"
-        [toolForm]="tool"
-        [index]="i"
-        (onRemoveTool)="handleRemoveTool($event)"
-      ></app-tool>
+      Add Tool
+    </button>
+    <div class="tools-container" formArrayName="tools">
+      <div
+        *ngFor="let tool of tools.controls; let i = index"
+        @insertRemoveTrigger
+      >
+        <app-tool
+          [toolsData]="toolsData"
+          [toolForm]="tool"
+          [index]="i"
+          (onRemoveTool)="handleRemoveTool($event)"
+        ></app-tool>
+      </div>
     </div>
   </div>
-</form>
-<!-- <label style="color: whitesmoke">Add an item: <input #newItem /></label>
-<button (click)="childToParent(newItem.value)">Add to parent's list</button> -->
+</div>

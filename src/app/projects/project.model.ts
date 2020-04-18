@@ -2,6 +2,7 @@ export interface Project{
   _id: string;
   name: string;
   description: string;
+  url: string;
   tools: Tool[];
   backgroundColor: string;
   descriptionColor: string;

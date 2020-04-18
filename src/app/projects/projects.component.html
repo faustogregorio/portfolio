@@ -1,7 +1,61 @@
-
-
-  <mat-grid-list [cols]="cols" rowHeight="2:1" gutterSize="10">
-    <mat-grid-tile *ngFor="let project of projects">
-      <app-project-item [project]="project" [fontSize]="fontSize"></app-project-item>
-    </mat-grid-tile>
-  </mat-grid-list>
+<div fxFlex="100%" fxLayout="row" fxLayoutGap="10px">
+  <div fxFlex="66.66%">
+    <mat-grid-list [cols]="cols" rowHeight="2:1" gutterSize="10px">
+      <mat-grid-tile *ngFor="let project of projects">
+        <app-project-item
+          [project]="project"
+          [fontSize]="fontSize"
+        ></app-project-item>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div fxFlex="33.33%">
+    <p class="mat-h4" style="text-align: center;">% de Tecnologias Utilizadas por los 4 Proyectos</p>
+    <mat-selection-list fxLayout="column" fxLayoutGap="10px">
+      <mat-list-option color="primary" style="position: relative; z-index: 99;">
+        <mat-progress-bar
+          mode="determinate"
+          value="80"
+          style="
+            position: absolute;
+            height: 48px;
+            bottom: 0px;
+            left: 0px;
+            z-index: -1;
+          "
+        ></mat-progress-bar>
+        Angular (80%)
+      </mat-list-option>
+      <mat-list-option color="primary" style="position: relative; z-index: 99;">
+        <mat-progress-bar
+          mode="determinate"
+          value="40"
+          style="
+            position: absolute;
+            height: 48px;
+            bottom: 0px;
+            left: 0px;
+            z-index: -1;
+          "
+        ></mat-progress-bar>
+        Node.js (40%)
+        </mat-list-option
+      >
+      <mat-list-option color="primary" style="position: relative; z-index: 99;">
+        <mat-progress-bar
+          mode="determinate"
+          value="10"
+          style="
+            position: absolute;
+            height: 48px;
+            bottom: 0px;
+            left: 0px;
+            z-index: -1;
+          "
+        ></mat-progress-bar>
+        PHP (10%)
+        </mat-list-option
+      >
+    </mat-selection-list>
+  </div>
+</div>

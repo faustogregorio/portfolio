@@ -13,6 +13,7 @@ export class ProjectsComponent implements OnInit {
       _id: 'qw',
       name: 'TruThables',
       description: 'desc',
+      url: 'https://faustogregorio.github.io/truth-table-generator/',
       tools: [
         {
           _id: '1',
@@ -28,6 +29,7 @@ export class ProjectsComponent implements OnInit {
       _id: 'qw',
       name: 'Truthables',
       description: 'desc',
+      url: 'https://faustogregorio.github.io/truth-table-generator/',
       tools: [
         {
           _id: '1',
@@ -43,6 +45,7 @@ export class ProjectsComponent implements OnInit {
       _id: 'qw',
       name: 'Truth Table Generator',
       description: 'desc',
+      url: 'https://faustogregorio.github.io/truth-table-generator/',
       tools: [
         {
           _id: '1',
@@ -58,6 +61,7 @@ export class ProjectsComponent implements OnInit {
       _id: 'qw',
       name: 'Generator',
       description: 'desc',
+      url: 'https://faustogregorio.github.io/truth-table-generator/',
       tools: [
         {
           _id: '1',
@@ -87,8 +91,8 @@ export class ProjectsComponent implements OnInit {
       this.cols = 2;
       this.fontSize = '0.9rem';
     } else if (window.innerWidth <= 1920) {
-      this.cols = 3;
-      this.fontSize = window.innerWidth <= 1280 ? '1rem' : '1.1rem';
+      this.cols = 1;
+      this.fontSize = window.innerWidth <= 1280 ? '1rem' : '1rem';
     } else {
       this.cols = 4;
       this.fontSize = '1.2rem';

@@ -1,12 +1,39 @@
-<!-- <input type="file" (change)="onFileChange($event)">
-<img src="" alt="" width="200px" #image> -->
 
-<mat-grid-list cols="5" gutterSize="10" rowHeight="2:1" >
+<mat-grid-list cols="5" gutterSize="10" rowHeight="2:1">
+  <mat-grid-tile colspan="3" rowspan="5">
+    <mat-grid-tile-header fxLayoutAlign="center center"
+      >Upload a Project</mat-grid-tile-header
+    >
+    <div
+      style="width: 100%; height: 100%;"
+      fxLayout="column"
+      fxLayoutAlign="start center"
+    >
+      <app-project-form
+        [projectForm]="projectForm"
+        style="width: 100%; margin-top: 75px;"
+      ></app-project-form>
+      <mat-divider
+        style="width: 100%; margin: 15px 0px 15px 0px;"
+      ></mat-divider>
+      <app-extract-color
+        style="width: 100%;"
+        (onPickedImage)="handlePickedImage($event)"
+        (onPikedBackgroundColor)="handlePickedBackgroundColor($event)"
+      ></app-extract-color>
+    </div>
 
-  <mat-grid-tile colspan="3" rowspan="4" style="background: #212121;">
-    <mat-grid-tile-header>header</mat-grid-tile-header>
-    <app-project-form (project)="updateProject($event)"></app-project-form>
-    <mat-grid-tile-footer>12</mat-grid-tile-footer>
+    <mat-grid-tile-footer fxLayoutAlign="end center">
+      <button
+        mat-stroked-button
+        color="primary"
+        type="button"
+        color="accent"
+        [disabled]="projectForm.invalid"
+      >
+        UPLOAD
+      </button>
+    </mat-grid-tile-footer>
   </mat-grid-tile>
   <mat-grid-tile colspan="2" rowspan="2">
     <app-project-item

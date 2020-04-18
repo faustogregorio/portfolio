@@ -1,17 +1,28 @@
-<mat-toolbar fxLayoutAlign="end" style="z-index: 99;">
+<!-- <mat-toolbar fxLayoutAlign="end" color="primary" style="z-index: 99;">
 
-  <mat-nav-list>
-    <a mat-list-item routerLink="/">PROJECTS</a>
-  </mat-nav-list>
-  <mat-nav-list>
-    <a mat-list-item routerLink="/about">ABOUT ME</a>
-  </mat-nav-list>
-  <mat-nav-list>
-    <a mat-list-item routerLink="/cv">CV</a>
-  </mat-nav-list>
-  <mat-nav-list>
-    <a mat-list-item routerLink="/management">MANAGEMENT</a>
-  </mat-nav-list>
-</mat-toolbar>
+  <div style.height="100%" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+    <a routerLink="/">PROJECTS</a>
+    <a routerLink="/about">ABOUT ME</a>
+    <a routerLink="/cv">RESUME</a>
+    <a routerLink="/management">MANAGEMENT</a>
+  </div>
+</mat-toolbar> -->
+<div style="width: 100%;min-height: 100vh;" fxLayoutAlign="center">
+  <div fxFlex="66.6666%" fxLayoutGap="10px">
+    <div fxFlex="15%">
+      <mat-nav-list >
+        <a mat-list-item routerLink="/">PROJECTS</a>
+        <a mat-list-item routerLink="/about">ABOUT ME</a>
+        <a mat-list-item routerLink="/cv">RESUME</a>
+        <a mat-list-item routerLink="/management">MANAGEMENT</a>
+     </mat-nav-list>
+    </div>
+    <div fxFlex="85%">
+      <div style="height: 10px;"></div>
+      <router-outlet></router-outlet>
+      <div style="height: 10px;"></div>
+    </div>
+  </div>
 
-<router-outlet></router-outlet>
+</div>
+
