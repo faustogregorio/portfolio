@@ -26,17 +26,14 @@ export class ProjectFormComponent implements OnInit {
     {
       _id: '1',
       name: 'Mysql',
-      logoUrl: 'assets/img/mysql.png'
     },
     {
       _id: '1',
       name: 'php',
-      logoUrl: 'assets/img/php.png'
     },
     {
       _id: '1',
       name: 'Github Pages',
-      logoUrl: 'assets/img/githubpages.svg'
     }
   ];
   constructor(

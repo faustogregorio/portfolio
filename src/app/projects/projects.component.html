@@ -1,18 +1,24 @@
 <div fxFlex="100%" fxLayout="row" fxLayoutGap="10px">
-  <div fxFlex="66.66%">
-    <mat-grid-list [cols]="cols" rowHeight="2:1" gutterSize="10px">
+  <div fxFlex="66.66%" fxLayout="column" fxLayoutGap="60px">
+      <div fxFlex="100%" *ngFor="let project of projects">
+        <app-project-item
+        [project]="project"
+        [fontSize]="fontSize"
+      ></app-project-item>
+      </div>
+   <!--  <mat-grid-list [cols]="cols" rowHeight="auto" gutterSize="10px">
       <mat-grid-tile *ngFor="let project of projects">
         <app-project-item
           [project]="project"
           [fontSize]="fontSize"
         ></app-project-item>
       </mat-grid-tile>
-    </mat-grid-list>
+    </mat-grid-list> -->
   </div>
   <div fxFlex="33.33%">
     <p class="mat-h4" style="text-align: center;">% de Tecnologias Utilizadas por los 4 Proyectos</p>
-    <mat-selection-list fxLayout="column" fxLayoutGap="10px">
-      <mat-list-option color="primary" style="position: relative; z-index: 99;">
+    <mat-selection-list fxLayout="column" fxLayoutGap="5px">
+      <mat-list-option style="position: relative; z-index: 99;">
         <mat-progress-bar
           mode="determinate"
           value="80"
@@ -26,7 +32,7 @@
         ></mat-progress-bar>
         Angular (80%)
       </mat-list-option>
-      <mat-list-option color="primary" style="position: relative; z-index: 99;">
+      <mat-list-option style="position: relative; z-index: 99;">
         <mat-progress-bar
           mode="determinate"
           value="40"
@@ -41,7 +47,7 @@
         Node.js (40%)
         </mat-list-option
       >
-      <mat-list-option color="primary" style="position: relative; z-index: 99;">
+      <mat-list-option style="position: relative; z-index: 99;">
         <mat-progress-bar
           mode="determinate"
           value="10"

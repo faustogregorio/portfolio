@@ -1,6 +1,7 @@
 export interface Project{
   _id: string;
   name: string;
+  date: Date;
   description: string;
   url: string;
   tools: Tool[];
@@ -13,5 +14,4 @@ export interface Project{
 export interface Tool {
   _id: string;
   name: string;
- logoUrl: string;
 }

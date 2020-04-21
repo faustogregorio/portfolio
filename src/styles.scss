@@ -8,8 +8,8 @@
 @include mat-core();
 
 // Define an alternate dark theme.
-$dark-primary: mat-palette($mat-pink, 900);
-$dark-accent:  mat-palette($mat-green, A200, A100, A400);
+$dark-primary: mat-palette($mat-light-blue, 600);
+$dark-accent:  mat-palette($mat-gray, 900);
 $dark-warn:    mat-palette($mat-amber, A100);
 $dark-theme:   mat-light-theme($dark-primary, $dark-accent, $dark-warn);
 

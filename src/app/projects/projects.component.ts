@@ -12,66 +12,146 @@ export class ProjectsComponent implements OnInit {
     {
       _id: 'qw',
       name: 'TruThables',
-      description: 'desc',
-      url: 'https://faustogregorio.github.io/truth-table-generator/',
+      date: new Date(),
+      description: `Es un sistema que permite la evaluación y elaboración de tablas de
+              verdad de expresiones de Lógica matemática, Conjuntos y Álgebra
+              Booleana.`,
+      url: 'http://dsc.itmorelia.edu.mx/truthables/',
       tools: [
         {
           _id: '1',
-          name: 'php',
-          logoUrl: 'assets/img/php.png'
-        }
+          name: 'Angular',
+        },
+        {
+          _id: '1',
+          name: 'Angular Material',
+        },
+        {
+          _id: '1',
+          name: 'MySQL',
+        },
+        {
+          _id: '1',
+          name: 'PHP',
+        },
       ],
-      backgroundColor: '000',
-      descriptionColor: 'ccc',
-      imageUrl: 'assets/img/truthables.png'
+      backgroundColor: 'f9f9f9',
+      descriptionColor: '000',
+      imageUrl: 'assets/img/dsc.jpg'
     },
     {
       _id: 'qw',
       name: 'Truthables',
-      description: 'desc',
-      url: 'https://faustogregorio.github.io/truth-table-generator/',
+      date: new Date(),
+      description: `Es un sistema que permite la evaluación y elaboración de tablas de
+              verdad de expresiones de Lógica matemática, Conjuntos y Álgebra
+              Booleana.`,
+      url: '',
       tools: [
         {
           _id: '1',
           name: 'php',
-          logoUrl: 'assets/img/php.png'
         }
       ],
-      backgroundColor: '546523',
-      descriptionColor: 'ccc',
+      backgroundColor: '180f14',
+      descriptionColor: 'fff',
       imageUrl: 'https://es.web.img3.acsta.net/newsv7/20/03/19/11/27/1847917.jpg'
     },
     {
       _id: 'qw',
       name: 'Truth Table Generator',
-      description: 'desc',
+      date: new Date(),
+      description: `Es un sistema que permite la evaluación y elaboración de tablas de
+              verdad de expresiones de Lógica matemática, Conjuntos y Álgebra
+              Booleana.`,
       url: 'https://faustogregorio.github.io/truth-table-generator/',
       tools: [
         {
           _id: '1',
-          name: 'php',
-          logoUrl: 'assets/img/php.png'
+          name: 'Angular',
+        },
+        {
+          _id: '1',
+          name: 'Angular Material',
+        },
+        {
+          _id: '1',
+          name: 'GitHub Pages',
+        },
+        {
+          _id: '1',
+          name: 'PEG.js',
         }
       ],
-      backgroundColor: '865427',
-      descriptionColor: 'ccc',
-      imageUrl: 'assets/img/ttg.jpg'
+      backgroundColor: 'f9f9f9',
+      descriptionColor: '000',
+      imageUrl: 'assets/img/fg.jpg'
+    },
+    {
+      _id: 'qw',
+      name: 'Truth Table Generator',
+      date: new Date(),
+      description: `Es un sistema que permite la evaluación y elaboración de tablas de
+              verdad de expresiones de Lógica matemática, Conjuntos y Álgebra
+              Booleana.`,
+      url: 'https://faustogregorio.github.io/truth-table-generator/',
+      tools: [
+        {
+          _id: '1',
+          name: 'Angular',
+        },
+        {
+          _id: '1',
+          name: 'Angular Material',
+        },
+        {
+          _id: '1',
+          name: 'Github Pages',
+        },
+        {
+          _id: '1',
+          name: 'PEG.js',
+        }
+      ],
+      backgroundColor: '49a8d8',
+      descriptionColor: '000',
+      imageUrl: 'assets/img/lindsay-2.png'
     },
     {
       _id: 'qw',
       name: 'Generator',
-      description: 'desc',
+      date: new Date(),
+      description: `Es un sistema que permite la evaluación y elaboración de tablas de
+              verdad de expresiones de Lógica matemática, Conjuntos y Álgebra
+              Booleana.`,
       url: 'https://faustogregorio.github.io/truth-table-generator/',
       tools: [
         {
           _id: '1',
           name: 'php',
-          logoUrl: 'assets/img/php.png'
         }
       ],
-      backgroundColor: '865427',
-      descriptionColor: 'ccc',
+      backgroundColor: 'dcd5bb',
+      descriptionColor: '000',
       imageUrl: 'assets/img/crow.jpg'
+    },
+    {
+      _id: 'qw',
+      name: 'Generator',
+      date: new Date(),
+      description: `Es un sistema que permite la evaluación y elaboración de tablas de
+              verdad de expresiones de Lógica matemática, Conjuntos y Álgebra
+              Booleana.`,
+      url: 'https://faustogregorio.github.io/truth-table-generator/',
+      tools: [
+        {
+          _id: '1',
+          name: 'php',
+        }
+      ],
+      backgroundColor: 'ceb7a6',
+      descriptionColor: '000',
+      imageUrl: 'assets/img/lindsay.jpg'
     }
   ];
   fontSize: string;

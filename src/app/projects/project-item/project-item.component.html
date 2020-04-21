@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div style="position: absolute;width: 100%; border-radius: 50px;">
     <img [src]="project.imageUrl" alt="" width="100%" style="object-fit: cover;"/>
   </div>
@@ -54,4 +54,50 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+<mat-card
+  class="example-card"
+  [style.backgroundColor]="'#' + project.backgroundColor"
+  [style.color]="'#' + project.descriptionColor"
+>
+  <mat-card-header>
+    <mat-card-title
+      ><a
+        *ngIf="project.url !== ''"
+        [href]="project.url"
+        target="_blank"
+        [style.color]="'#' + project.descriptionColor"
+        >{{ project.name }}</a
+      >
+      <span *ngIf="project.url === ''">{{project.name}}</span>
+      </mat-card-title
+    >
+    <mat-card-subtitle [style.color]="'#' + project.descriptionColor">{{
+      project.date | date
+    }}</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    mat-card-image
+    [src]="project.imageUrl"
+    alt="Photo of a Shiba Inu"
+    width="100%"
+    #img
+  />
+
+  <mat-card-content>
+    <p style="font-size: 1.1rem; text-align: center;">
+      {{ project.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions fxLayout="row wrap" fxLayoutAlign="center">
+    <mat-chip-list aria-label="Fish selection">
+      <mat-chip
+        *ngFor="let tool of project.tools"
+        [style.backgroundColor]="'#' + project.descriptionColor"
+        ><span [style.color]="'#' + project.backgroundColor">{{
+          tool.name
+        }}</span></mat-chip
+      >
+    </mat-chip-list>
+  </mat-card-actions>
+</mat-card>

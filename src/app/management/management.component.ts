@@ -15,13 +15,25 @@ export class ManagementComponent implements OnInit {
     {
       _id: 'qw',
       name: 'TruThables',
+      date: new Date(),
       description: 'desc',
       url: 'https://faustogregorio.github.io/truth-table-generator/',
       tools: [
         {
           _id: '1',
-          name: 'php',
-          logoUrl: 'assets/img/php.png'
+          name: 'PHP',
+        },
+        {
+          _id: '1',
+          name: 'Angular',
+        },
+        {
+          _id: '1',
+          name: 'Angular Material',
+        },
+        {
+          _id: '1',
+          name: 'Github Pages',
         }
       ],
       backgroundColor: '000000',
