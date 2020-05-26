@@ -1,10 +1,10 @@
 <div
   style="width: 100%;"
-  fxLayout="row wrap"
+  fxLayout="column"
   fxLayoutAlign="center"
   fxLayoutGap="15px"
 >
-  <div fxFlex="100%" fxLayoutAlign="center" style="padding-bottom: 15px;">
+  <div style="width: 100%;" fxLayoutAlign="center">
     <input
       style="display: none;"
       type="file"
@@ -21,14 +21,14 @@
     <mat-icon>add_photo_alternate</mat-icon>
     </button>
   </div>
-  <div fxFlex="calc(40% - 15px)" style="height: 233px;" fxLayoutAlign="center center">
-    <img src="" alt="" height="100%" width="auto" #image />
+  <div style="width: 100%;" fxLayoutAlign="center center">
+    <img src="" alt="" height="auto" width="66.66%" #image />
   </div>
-  <div fxFlex="60%">
+  <div style="width: 100%;">
     <p *ngIf="color && palette">
       Pick a Background Color
     </p>
-    <mat-grid-list cols="7" rowHeight="100px" *ngIf="color && palette">
+    <mat-grid-list cols="7" rowHeight="50px" *ngIf="color && palette">
       <mat-grid-tile
         [style.backgroundColor]="'#' + decimalToHexadecimal(color)"
         colspan="2"
